@@ -7,8 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CAF275E2A1121DB002E599A /* SimpleDrinkLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF275D2A1121DB002E599A /* SimpleDrinkLibrary.swift */; };
+		1CAF275E2A1121DB002E599A /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF275D2A1121DB002E599A /* Drink.swift */; };
+		1CAF27702A1122FF002E599A /* libSimpleDrinkLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CAF275A2A1121DB002E599A /* libSimpleDrinkLibrary.a */; };
+		1CAF27762A112302002E599A /* DrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF27662A112297002E599A /* DrinkTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CAF27712A1122FF002E599A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CAF27522A1121DA002E599A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CAF27592A1121DA002E599A;
+			remoteInfo = SimpleDrinkLibrary;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1CAF27582A1121DA002E599A /* CopyFiles */ = {
@@ -24,7 +36,9 @@
 
 /* Begin PBXFileReference section */
 		1CAF275A2A1121DB002E599A /* libSimpleDrinkLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimpleDrinkLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CAF275D2A1121DB002E599A /* SimpleDrinkLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDrinkLibrary.swift; sourceTree = "<group>"; };
+		1CAF275D2A1121DB002E599A /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		1CAF27662A112297002E599A /* DrinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTests.swift; sourceTree = "<group>"; };
+		1CAF276C2A1122FF002E599A /* SimpleDrinkLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleDrinkLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1CAF27692A1122FF002E599A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CAF27702A1122FF002E599A /* libSimpleDrinkLibrary.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				1CAF275C2A1121DB002E599A /* SimpleDrinkLibrary */,
+				1CAF276D2A1122FF002E599A /* SimpleDrinkLibraryTests */,
 				1CAF275B2A1121DB002E599A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				1CAF275A2A1121DB002E599A /* libSimpleDrinkLibrary.a */,
+				1CAF276C2A1122FF002E599A /* SimpleDrinkLibraryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +81,25 @@
 		1CAF275C2A1121DB002E599A /* SimpleDrinkLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				1CAF275D2A1121DB002E599A /* SimpleDrinkLibrary.swift */,
+				1CAF27652A112258002E599A /* Drinks */,
 			);
 			path = SimpleDrinkLibrary;
+			sourceTree = "<group>";
+		};
+		1CAF27652A112258002E599A /* Drinks */ = {
+			isa = PBXGroup;
+			children = (
+				1CAF275D2A1121DB002E599A /* Drink.swift */,
+			);
+			path = Drinks;
+			sourceTree = "<group>";
+		};
+		1CAF276D2A1122FF002E599A /* SimpleDrinkLibraryTests */ = {
+			isa = PBXGroup;
+			children = (
+				1CAF27662A112297002E599A /* DrinkTests.swift */,
+			);
+			path = SimpleDrinkLibraryTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +122,24 @@
 			productReference = 1CAF275A2A1121DB002E599A /* libSimpleDrinkLibrary.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		1CAF276B2A1122FF002E599A /* SimpleDrinkLibraryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CAF27732A1122FF002E599A /* Build configuration list for PBXNativeTarget "SimpleDrinkLibraryTests" */;
+			buildPhases = (
+				1CAF27682A1122FF002E599A /* Sources */,
+				1CAF27692A1122FF002E599A /* Frameworks */,
+				1CAF276A2A1122FF002E599A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CAF27722A1122FF002E599A /* PBXTargetDependency */,
+			);
+			name = SimpleDrinkLibraryTests;
+			productName = SimpleDrinkLibraryTests;
+			productReference = 1CAF276C2A1122FF002E599A /* SimpleDrinkLibraryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +151,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					1CAF27592A1121DA002E599A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					1CAF276B2A1122FF002E599A = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -111,20 +172,47 @@
 			projectRoot = "";
 			targets = (
 				1CAF27592A1121DA002E599A /* SimpleDrinkLibrary */,
+				1CAF276B2A1122FF002E599A /* SimpleDrinkLibraryTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CAF276A2A1122FF002E599A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1CAF27562A1121DA002E599A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CAF275E2A1121DB002E599A /* SimpleDrinkLibrary.swift in Sources */,
+				1CAF275E2A1121DB002E599A /* Drink.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CAF27682A1122FF002E599A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CAF27762A112302002E599A /* DrinkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CAF27722A1122FF002E599A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CAF27592A1121DA002E599A /* SimpleDrinkLibrary */;
+			targetProxy = 1CAF27712A1122FF002E599A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1CAF275F2A1121DB002E599A /* Debug */ = {
@@ -267,6 +355,38 @@
 			};
 			name = Release;
 		};
+		1CAF27742A1122FF002E599A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6RC2G4MTCN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = homayun.SimpleDrinkLibraryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1CAF27752A1122FF002E599A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6RC2G4MTCN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = homayun.SimpleDrinkLibraryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -284,6 +404,15 @@
 			buildConfigurations = (
 				1CAF27622A1121DB002E599A /* Debug */,
 				1CAF27632A1121DB002E599A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CAF27732A1122FF002E599A /* Build configuration list for PBXNativeTarget "SimpleDrinkLibraryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CAF27742A1122FF002E599A /* Debug */,
+				1CAF27752A1122FF002E599A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
